@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 4 - Bordas, Outline e :hover</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 20px;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        /* Cabeçalho preto com barra verde */
+        header {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 15px 20px;
+            border-bottom: 20px solid #00aa00;
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 26px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        header p {
+            margin: 15px 0 0 0;
+            font-style: italic;
+            font-size: 14px;
+        }
+
+        /* Configuração geral das seções/caixas */
+        section {
+            padding: 20px;
+            margin-bottom: 25px;
+            transition: background-color 0.2s, outline 0.2s;
+        }
+
+        /* Caixa 1: Tartaruga */
+        section.tartaruga {
+            background-color: #e6f7f7;
+            border: 2px solid #008080;
+        }
+
+        /* Caixa 2: Onça-pintada */
+        section.onca {
+            background-color: #fff8e7;
+            border: 2px solid #a52a2a;
+        }
+
+        /* Caixa 3: Mico-leão-dourado */
+        section.mico {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+        }
+
+        /* Efeito :HOVER em qualquer seção */
+        section:hover {
+            background-color: #ff80ab !important;
+            outline: 4px solid #d81b60;
+            cursor: pointer;
+        }
+
+        h2 {
+            font-size: 22px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 1.4;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        /* Container de imagem com borda pontilhada (dotted) */
+        .imagem-container {
+            margin: 15px 0;
+        }
+
+        .imagem-container img {
+            width: 260px;
+            height: auto;
+            display: block;
+            border: 6px dotted #008080; /* Borda pontilhada envolvente */
+            padding: 3px;
+            background-color: #ffffff;
+        }
+
+        section.onca .imagem-container img {
+            border-color: #a52a2a;
+        }
+
+        section.mico .imagem-container img {
+            border-color: #2e7d32;
+        }
+
+        .legenda {
+            font-size: 13px;
+            font-style: italic;
+            color: #555555;
+            margin-top: 6px;
+        }
+
+        /* Rodapé */
+        footer {
+            margin-top: 30px;
+            padding-top: 10px;
+            border-top: 1px solid #ccc;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Praticando 4 - Bordas, Outline e :hover</h1>
+        <p>Passe o mouse sobre cada caixa para ver o efeito de :hover.</p>
+    </header>
+
+    <!-- Tartaruga -->
+    <section class="tartaruga">
+        <h2>Tartaruga marinha (Cheloniidae)</h2>
+        <p>Tartaruga-marinha (Cheloniidae) é a família da ordem das tartarugas que inclui as espécies que habitam mares tropicais e subtropicais em todo o mundo. O grupo é constituído por seis gêneros e sete espécies, todas elas ameaçadas de extinção.</p>
+        
+        <div class="imagem-container">
+            <img src="imagens/Tartaruga-marinha.avif" alt="Tartaruga marinha">
+            <div class="legenda">Legenda: Tartaruga marinha (Cheloniidae)</div>
+        </div>
+
+        <p>A sobrevivência das tartarugas-marinhas continua em risco devido a muitos anos de caça intensiva pela sua carapaça, carne (utilizada para sopa) e gordura. Atualmente a caça está controlada, mas estes animais continuam ameaçados pelas redes de pesca que matam cerca de 40 000 exemplares por ano. Outra das maiores ameaças é o desenvolvimento costeiro nas áreas de nidificação, que impede as fêmeas de pôr os ovos e impossibilita a sua reprodução.</p>
+        <p>A maioria das espécies são migratórias e vagueiam pelos oceanos, orientando-se com a ajuda do campo magnético terrestre.</p>
+    </section>
+
+    <!-- Onça -->
+    <section class="onca">
+        <h2>Onça-pintada (Panthera onca)</h2>
+        <p>A onça-pintada (Panthera onca) é o maior felino das Américas e o terceiro maior do mundo, atrás apenas do leão e do tigre. Vive em florestas, pantanais e cerrados, do México até o norte da Argentina.</p>
+        
+        <div class="imagem-container">
+            <img src="imagens/onca-pintada.jpg" alt="Onça-pintada">
+            <div class="legenda">Legenda: Onça-pintada (Panthera onca)</div>
+        </div>
+
+        <p>É um predador de topo de cadeia alimentar: caça desde capivaras e veados até jacarés, usando uma mordida extremamente forte, capaz de perfurar o crânio de suas presas.</p>
+        <p>Está classificada como espécie quase ameaçada, principalmente por causa da destruição de seu habitat natural e de conflitos com produtores rurais.</p>
+    </section>
+
+    <!-- Mico -->
+    <section class="mico">
+        <h2>Mico-leão-dourado (Leontopithecus rosalia)</h2>
+        <p>O mico-leão-dourado (Leontopithecus rosalia) é um pequeno primata encontrado apenas na Mata Atlântica do Rio de Janeiro, reconhecido pela pelagem alaranjada e brilhante que lembra a juba de um leão.</p>
+        
+        <div class="imagem-container">
+            <img src="imagens/Mico-leao-dourado.avif" alt="Mico-leão-dourado">
+            <div class="legenda">Legenda: Mico-leão-dourado (Leontopithecus rosalia)</div>
+        </div>
+
+        <p>Vive em pequenos grupos familiares e se alimenta principalmente de frutas, insetos e pequenos vertebrados.</p>
+        <p>Foi um dos primeiros símbolos de conservação da fauna brasileira: chegou a ter menos de 200 indivíduos na natureza na década de 1970, e hoje é considerado um símbolo de sucesso em programas de reintrodução.</p>
+    </section>
+
+    <footer>
+        <p>© 2026 IFSP Votuporanga — Desenvolvimento Web 1</p>
+    </footer>
+
+</body>
+</html>

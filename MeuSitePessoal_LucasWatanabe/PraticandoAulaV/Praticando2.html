@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tabelas com Colspan e Rowspan Colorido</title>
+
+    <link rel="icon" type="image/png" href="Imagens/IconeTabela.png">
+
+    <style>
+
+        table,
+        td {
+            border: 1px solid darkred;
+        }
+
+        td {
+            padding: 30px 60px;
+            text-align: center;
+        }
+
+        /* Cores da tabela */
+
+        td.tdVerde {
+            background-color: green;
+        }
+
+        td.tdDarkRed {
+            background-color: darkred;
+        }
+
+        td.tdAzul {
+            background-color: blue;
+        }
+
+        td.tdAmarelo {
+            background-color: yellow;
+        }
+
+        /* Apenas a tabela da legenda fica menor */
+
+        table.legenda td {
+            padding: 3px 8px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <h1>Tabela com Colspan e Rowspan e Background Colorido</h1>
+
+    </header>
+
+
+    <nav>
+
+        <p>
+            Veja minha tabela com Colspan e Rowspan colorida,
+            espero que goste!
+        </p>
+
+    </nav>
+
+
+    <main>
+
+        <!-- ==================== TABELA PRINCIPAL ==================== -->
+
+        <section>
+
+            <table>
+
+                <caption>
+                    Tabela grande com Colspan e Rowspan.
+                </caption>
+
+
+                <!-- LINHA 1 -->
+
+                <tr>
+
+                    <td class="tdVerde" colspan="2">
+                        Colspan
+                    </td>
+
+                    <td class="tdVerde">
+                        -
+                    </td>
+
+                    <td class="tdVerde" rowspan="3">
+                        Rowspan
+                    </td>
+
+                </tr>
+
+
+                <!-- LINHA 2 -->
+
+                <tr>
+
+                    <td class="tdDarkRed">
+                        -
+                    </td>
+
+                    <td class="tdDarkRed">
+                        -
+                    </td>
+
+                    <td class="tdDarkRed">
+                        -
+                    </td>
+
+                </tr>
+
+
+                <!-- LINHA 3 -->
+
+                <tr>
+
+                    <td class="tdAzul">
+                        -
+                    </td>
+
+                    <td class="tdAzul" colspan="2">
+                        Colspan
+                    </td>
+
+                </tr>
+
+
+                <!-- LINHA 4 -->
+
+                <tr>
+
+                    <td class="tdAmarelo">
+                        -
+                    </td>
+
+                    <td class="tdAmarelo">
+                        -
+                    </td>
+
+                    <td class="tdAmarelo">
+                        -
+                    </td>
+
+                    <td class="tdAmarelo" colspan="2">
+                        -
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+
+        <br><br>
+
+
+        <!-- ==================== LEGENDA ==================== -->
+
+        <section>
+
+            <table class="legenda">
+
+                <caption>
+                    Legenda
+                </caption>
+
+
+                <!-- LINHA 1 -->
+
+                <tr>
+
+                    <td>
+                        Linha 1
+                    </td>
+
+                    <td class="tdVerde">
+                        --------
+                    </td>
+
+                    <td>
+                        green
+                    </td>
+
+                </tr>
+
+
+                <!-- LINHA 2 -->
+
+                <tr>
+
+                    <td>
+                        Linha 2
+                    </td>
+
+                    <td class="tdDarkRed">
+                        --------
+                    </td>
+
+                    <td>
+                        red
+                    </td>
+
+                </tr>
+
+
+                <!-- LINHA 3 -->
+
+                <tr>
+
+                    <td>
+                        Linha 3
+                    </td>
+
+                    <td class="tdAzul">
+                        --------
+                    </td>
+
+                    <td>
+                        blue
+                    </td>
+
+                </tr>
+
+
+                <!-- LINHA 4 -->
+
+                <tr>
+
+                    <td>
+                        Linha 4
+                    </td>
+
+                    <td class="tdAmarelo">
+                        --------
+                    </td>
+
+                    <td>
+                        yellow
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            &copy; 2026 Lucas Teixeira Watanabe
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
