@@ -1,0 +1,97 @@
+/* Configurações Globais - Estilo Tradicional */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 15px;
+}
+
+/* Navegação de Ir e Vir */
+.nav-global {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.nav-global a, footer a {
+    color: #0000ee;
+    margin-right: 10px;
+}
+
+.nav-global a:visited, footer a:visited {
+    color: #551a8b;
+}
+
+/* Estrutura das Seções */
+section {
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+/* Cores dos SPANs */
+.red {
+    background-color: red;
+    color: white;
+    padding: 2px 4px;
+}
+
+.green {
+    background-color: green;
+    color: white;
+    padding: 2px 4px;
+}
+
+.blue {
+    background-color: rgb(68, 193, 231);
+    color: black;
+    padding: 2px 4px;
+}
+
+.yellow {
+    background-color: yellow;
+    color: black;
+    padding: 2px 4px;
+}
+
+.orange {
+    background-color: orange;
+    color: black;
+    padding: 2px 4px;
+}
+
+/* Seções com Bordas e Cores de Fundo */
+.B1Red {
+    border: 3px solid darkred;
+    color: darkred;
+    background-color: rgb(240, 135, 135);
+}
+
+.B2Green {
+    border: 3px solid darkgreen;
+    color: darkgreen;
+    background-color: rgb(123, 237, 123);
+}
+
+.B3Blue {
+    border: 3px solid darkblue;
+    color: darkblue;
+    background-color: rgb(116, 116, 240);
+}
+
+.B4Yellow {
+    border: 3px solid rgb(141, 141, 6);
+    color: rgb(141, 141, 6);
+    background-color: rgb(246, 246, 118);
+}
+
+.B5Orange {
+    border: 3px solid rgb(176, 98, 1);
+    color: rgb(176, 98, 1);
+    background-color: rgb(244, 203, 168);
+}
+
+/* Rodapé Tradicional */
+footer {
+    margin-top: 20px;
+    padding-top: 10px;
+    font-size: 0.9em;
+}

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tabelas com Colspan e Rowspan Colorido</title>
+
+    <!-- <link rel="icon" type="image/png" href="Imagens/IconeTabela.png"> -->
+
+    <style>
+
+        /* Fonte tradicional Times New Roman para toda a página */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 15px;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        /* Navegação tradicional em links */
+        .navegacao {
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .navegacao a {
+            color: #0000ee;
+            margin-right: 10px;
+        }
+
+        .navegacao a:visited {
+            color: #551a8b;
+        }
+
+        /* ESTILOS DA TABELA */
+        table,
+        td {
+            border: 1px solid darkred;
+        }
+
+        td {
+            padding: 30px 60px;
+            text-align: center;
+        }
+
+        /* Cores da tabela */
+
+        td.tdVerde {
+            background-color: green;
+        }
+
+        td.tdDarkRed {
+            background-color: darkred;
+        }
+
+        td.tdAzul {
+            background-color: blue;
+        }
+
+        td.tdAmarelo {
+            background-color: yellow;
+        }
+
+        /* Apenas a tabela da legenda fica menor */
+
+        table.legenda td {
+            padding: 3px 8px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- Navegação de Ir e Vir (Topo) -->
+    <nav class="navegacao">
+        <a href="Praticando1.html">&lt;&lt; Voltar para Praticando 1</a> | 
+        <a href="index.html">Menu Aula V</a> | 
+        <a href="Praticando3.html">Avançar para Praticando 3 &gt;&gt;</a> | 
+        <a href="../index.html">Site Pessoal</a>
+    </nav>
+
+    <hr>
+
+    <header>
+
+        <h1 id="topo">Tabela com Colspan e Rowspan e Background Colorido</h1>
+
+    </header>
+
+    <section>
+
+        <p>
+            Veja minha tabela com Colspan e Rowspan colorida,
+            espero que goste!
+        </p>
+
+    </section>
+
+    <hr>
+
+    <main>
+
+        <!-- ==================== TABELA PRINCIPAL ==================== -->
+
+        <section>
+
+            <table>
+
+                <caption>
+                    Tabela grande com Colspan e Rowspan.
+                </caption>
+
+
+                <!-- LINHA 1 -->
+
+                <tr>
+
+                    <td class="tdVerde" colspan="2">
+                        Colspan
+                    </td>
+
+                    <td class="tdVerde">
+                        -
+                    </td>
+
+                    <td class="tdVerde" rowspan="3">
+                        Rowspan
+                    </td>
+
+                </tr>
+
+
+                <!-- LINHA 2 -->
+
+                <tr>
+
+                    <td class="tdDarkRed">
+                        -
+                    </td>
+
+                    <td class="tdDarkRed">
+                        -
+                    </td>
+
+                    <td class="tdDarkRed">
+                        -
+                    </td>
+
+                </tr>
+
+
+                <!-- LINHA 3 -->
+
+                <tr>
+
+                    <td class="tdAzul">
+                        -
+                    </td>
+
+                    <td class="tdAzul" colspan="2">
+                        Colspan
+                    </td>
+
+                </tr>
+
+
+                <!-- LINHA 4 -->
+
+                <tr>
+
+                    <td class="tdAmarelo">
+                        -
+                    </td>
+
+                    <td class="tdAmarelo">
+                        -
+                    </td>
+
+                    <td class="tdAmarelo">
+                        -
+                    </td>
+
+                    <td class="tdAmarelo" colspan="2">
+                        -
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+
+        <br><br>
+
+
+        <!-- ==================== LEGENDA ==================== -->
+
+        <section>
+
+            <table class="legenda">
+
+                <caption>
+                    Legenda
+                </caption>
+
+
+                <!-- LINHA 1 -->
+
+                <tr>
+
+                    <td>
+                        Linha 1
+                    </td>
+
+                    <td class="tdVerde">
+                        --------
+                    </td>
+
+                    <td>
+                        green
+                    </td>
+
+                </tr>
+
+
+                <!-- LINHA 2 -->
+
+                <tr>
+
+                    <td>
+                        Linha 2
+                    </td>
+
+                    <td class="tdDarkRed">
+                        --------
+                    </td>
+
+                    <td>
+                        red
+                    </td>
+
+                </tr>
+
+
+                <!-- LINHA 3 -->
+
+                <tr>
+
+                    <td>
+                        Linha 3
+                    </td>
+
+                    <td class="tdAzul">
+                        --------
+                    </td>
+
+                    <td>
+                        blue
+                    </td>
+
+                </tr>
+
+
+                <!-- LINHA 4 -->
+
+                <tr>
+
+                    <td>
+                        Linha 4
+                    </td>
+
+                    <td class="tdAmarelo">
+                        --------
+                    </td>
+
+                    <td>
+                        yellow
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer>
+
+        <p>
+            &copy; 2026 Lucas Teixeira Watanabe - Projeto desenvolvido para praticar <strong>HTML/CSS</strong>.
+        </p>
+
+        <p>
+            <a href="#topo">Voltar ao Topo</a> | 
+            <a href="Praticando1.html">Praticando 1</a> | 
+            <a href="index.html">Voltar ao Menu Aula V</a> | 
+            <a href="Praticando3.html">Ir para o Praticando 3</a> | 
+            <a href="../index.html">Voltar ao Site Pessoal</a>
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

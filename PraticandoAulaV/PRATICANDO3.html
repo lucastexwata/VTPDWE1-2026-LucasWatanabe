@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 3 - Aula V</title>
+
+    <style>
+        /* Estilo padrão tradicional */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 15px;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        /* Estilo tradicional dos links de navegação */
+        .navegacao {
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .navegacao a {
+            color: #0000ee;
+            margin-right: 10px;
+        }
+
+        .navegacao a:visited {
+            color: #551a8b;
+        }
+
+        /* ESTILOS DO PRATICANDO 3 */
+        .header {
+            background-color: rgb(155, 199, 235);
+            padding: 10px;
+        }
+
+        .section {
+            background-color: rgb(234, 254, 221);
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            background-color: rgb(167, 167, 167);
+            padding: 10px;
+        }
+
+        .div1 {
+            background-color: yellow;
+            border: 3px solid red;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .div2 {
+            background-color: rgb(155, 199, 235);
+            border: 3px solid red;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .div3 {
+            border: 3px solid blue;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .div4 {
+            border: 3px solid orange;
+            background-color: rgb(233, 214, 180);
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        .green {
+            color: green;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .grey {
+            background-color: rgb(182, 182, 182);
+        }
+
+        .block {
+            background-color: white;
+            border: 2px solid orange;
+            padding: 5px;
+        }
+
+        .blockquote {
+            background-color: white;
+            border: 2px solid orange;
+            margin-left: 40px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navegação de Ir e Vir (Topo) -->
+    <nav class="navegacao">
+        <a href="Praticando2.html">&lt;&lt; Voltar para Praticando 2</a> | 
+        <a href="index.html">Menu Aula V</a> | 
+        <a href="../index.html">Site Pessoal</a>
+    </nav>
+
+    <hr>
+
+    <header>
+        <div class="header">
+            <h1 id="topo">Praticando 03 - Seções, Containers e Bordas com CSS</h1>
+            <p>Este é um exemplo de cabeçalho feito com &lt;header&gt;.</p>
+        </div>
+    </header>
+
+    <br>
+
+    <section class="section">
+        <h2>Seção 1</h2>
+        <p>Este é um exemplo de texto com uma palavra <span class="blue">azul</span>, uma palavra <span class="green">verde</span> e uma palavra <span class="red">vermelha</span>.</p>
+
+        <div class="div1"><p>Caixa feita com DIV dentro da seção.</p></div>
+        <div class="div2">
+            <p>Segundo a "História da Web, a primeira página HTML foi publicada em 1991 - mais de 30 anos atrás. Hoje, a linguagem é usada em <b>bilhões</b> de páginas ao redor do mundo.</p>
+            <p>Curiosidade: o símbolo de grau (&deg;) e o de multiplicação (&times;) também são entidades, como em <b>25&deg;C</b> ou <b>3 &times; 4</b>.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Seção 2</h2>
+        <p>Este é outro exemplo de texto, agora há <span class="green">mais palavras em verde</span>, <span class="blue">algumas em azul</span> e só uma em <span class="red">vermelho</span>.</p>
+
+        <div class="div2">
+            <p>Todo rodapé de site sério tem um símbolo de copyright &copy; e, as vezes, até de marca registrada (&reg;) ou marca comercial (&trade;). Setas também são comuns em menus: &larr; voltar &rarr; avançar.</p>
+            <p>E frações? &frac12; xícara de açucar, &frac14; de hora - tudo isso são entidades HTML!</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Seção 3 - Por que entidades existem de verdade</h2>
+        <p>Além dos símbolos "bonitinhos", entidades resolvem um problema real: como mostrar um sinal de menor (<code><span class="grey">&amp;lt;</span></code>) ou maior (<code><span class="grey">&amp;gt;</span></code>) na tela sem o navegador achar que é o início de uma tag?</p>
+        
+        <div class="div1">
+            <p>Se eu quiser que a tag <code><span class="grey">&lt;p&gt;</span></code> apareça como texto normal (sem virar um parágrafo de verdade). Preciso escrever <code><span class="grey">&amp;lt;p&amp;gt;</span></code> no código-fonte.</p>
+            <p>O mesmo vale para o "E Comercial" (&amp;): quando eu quero mostrá-lo literalmente, preciso escrever <code><span class="grey">&amp;amp;</span></code></p>
+            <p>(Nota: repare que a tag <span class="grey"><code>code</code></span> foi usada aqui porque ela indica que aquele trecho é código - e o navegador já mostra esse texto com uma fonte diferente por padrão, sem eu precisar definir nada com CSS).</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Elementos Inline vs. Block</h2>
+        <p>Alguns elementos HTML ficam <b>na mesma linha</b> que o conteúdo ao redor (inline); outros sempre <b>começam em uma outra linha nova</b> (block). Compare:</p>
+
+        <div class="div3">
+            <h3><b>Inline</b></h3>
+
+            <span style="background-color: white; color: blue; border: 2px solid blue;">&lt;a&gt;</span>
+            <span style="background-color: white; border: 2px solid blue;"><b>&lt;strong&gt;</b></span>
+            <span style="background-color: white; border: 2px solid blue;"><i>&lt;em&gt;</i></span>
+            <span style="background-color: yellow; border: 2px solid blue;">&lt;mark&gt;</span>
+            <span style="background-color: grey; border: 2px solid blue;"><code>&lt;code&gt;</code></span>
+            <span style="background-color: white; border: 2px solid blue;">H<sub>2</sub>O(&lt;sub&gt;)</span>
+            <span style="background-color: white; border: 2px solid blue;">m<sup>2</sup>(&lt;sup&gt;)</span>
+
+            <p><i>Repare: todos os exemplos acima ficam lado a lado, na mesma linha.</i></p>
+        </div>
+
+        <div class="div4">
+            <h3><b>Block</b></h3>
+
+            <div class="block">&lt;div&gt; - Um container genérico.</div>
+            <br>
+            <div class="block">&lt;p&gt; - Um parágrafo.</div>
+            <br>
+            <div class="block"><b>&lt;h1&gt; a &lt;h6&gt; - Títulos.</b></div>
+            <br>
+            <div class="blockquote">&lt;blockquote&gt; - Uma citação.</div>
+            <br>
+            <div class="block">&lt;section&gt; - Uma seção (como esta própria página usa!).</div>
+            
+            <p><i>Repare: cada exemplo acima começa em uma linha própria, mesmo sendo um texto curto.</i></p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div>
+            <p>Este é um exemplo de rodapé feito com &lt;footer&gt;.</p>
+            <p>&copy; 2026 IFSP Votuporanga - Desenvolvimento Web I</p>
+        </div>
+    </footer>
+
+    <hr>
+
+    <!-- Navegação de Ir e Vir (Rodapé) -->
+    <footer>
+        <p>
+            <a href="#topo">Voltar ao Topo</a> | 
+            <a href="Praticando1.html">Praticando 1</a> | 
+            <a href="Praticando2.html">Praticando 2</a> | 
+            <a href="index.html">Voltar ao Menu Aula V</a> | 
+            <a href="../index.html">Voltar ao Site Pessoal</a>
+        </p>
+    </footer>
+
+</body>
+</html>

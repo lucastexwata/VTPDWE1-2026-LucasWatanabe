@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 4 - Tabela de cores e Imagens como plano de fundo</title>
+
+    <style>
+        /* CONFIGURAÇÕES DO BODY:
+           - Logo do IFSP à direita com afastamento das bordas
+           - Faixa de paletas colada no rodapé (bottom 0)
+        */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 20px;
+            padding-bottom: 120px; /* Garante espaço para a faixa no rodapé não cobrir conteúdo */
+            min-height: 100vh;
+            box-sizing: border-box;
+
+            /* 1º Imagem: Logo IFSP | 2º Imagem: Faixa de paletas */
+            background-image: url('imagens/Marca_IFSP_2015031.png'), url('imagens/1330892.png');
+            background-repeat: no-repeat, repeat-x;
+            
+            /* Posicionamento preciso das distâncias:
+               - Logo: 30px da direita e 150px do topo
+               - Paletas: Alinhada à esquerda e colada na borda inferior (0) */
+            background-position: right 30px top 150px, left bottom 0;
+            
+            /* Ajuste dos tamanhos das imagens */
+            background-size: 160px auto, auto 90px;
+            background-attachment: fixed, fixed;
+        }
+
+        /* ESTILO DOS LINKS DE NAVEGAÇÃO */
+        .navegacao {
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .navegacao a, footer a {
+            color: #0000ee;
+            margin-right: 10px;
+        }
+
+        .navegacao a:visited, footer a:visited {
+            color: #551a8b;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        /* TABELA DE CORES */
+        table, th, td {
+            border: 1px solid #000000;
+            border-collapse: collapse;
+        }
+
+        table {
+            text-align: center;
+        }
+
+        caption {
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 3px 12px;
+        }
+
+        /* CLASSES DE CORES */
+        .c-red { background-color: red; }
+        .c-b30000 { background-color: #b30000; }
+        .c-660000 { background-color: #660000; }
+        .c-green { background-color: green; }
+        .c-99ff99 { background-color: #99ff99; }
+        .c-004d00 { background-color: #004d00; }
+        .c-blue { background-color: blue; }
+        .c-ccccff { background-color: #ccccff; }
+        .c-000066 { background-color: #000066; }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navegação de Ir e Vir (Topo) -->
+    <nav class="navegacao">
+        <a href="Praticando3.html">&lt;&lt; Voltar para Praticando 3</a> | 
+        <a href="index.html">Menu Aula VI</a> | 
+        <a href="Praticando5.html">Ir para Praticando 5 &gt;&gt;</a> |
+        <a href="../MeuSitePessoal_LucasWatanabe/index.html">Voltar ao Site Pessoal</a>
+    </nav>
+
+    <hr>
+
+    <h1 id="topo">Praticando 4 - Tabela de cores e Imagens como plano de fundo</h1>
+
+    <table>
+        <caption>Tabela de cores HTML/CSS</caption>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Cor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>red</td>
+                <td class="c-red"> - - - - - - - - - - - - - - - - - - - - </td>
+            </tr>
+            <tr>
+                <td>#b30000</td>
+                <td class="c-b30000"> - - - - - - - - - - - - - - - - - - - - </td>
+            </tr>
+            <tr>
+                <td>#660000</td>
+                <td class="c-660000"> - - - - - - - - - - - - - - - - - - - - </td>
+            </tr>
+            <tr>
+                <td>green</td>
+                <td class="c-green"> - - - - - - - - - - - - - - - - - - - - </td>
+            </tr>
+            <tr>
+                <td>#99ff99</td>
+                <td class="c-99ff99"> - - - - - - - - - - - - - - - - - - - - </td>
+            </tr>
+            <tr>
+                <td>#004d00</td>
+                <td class="c-004d00"> - - - - - - - - - - - - - - - - - - - - </td>
+            </tr>
+            <tr>
+                <td>blue</td>
+                <td class="c-blue"> - - - - - - - - - - - - - - - - - - - - </td>
+            </tr>
+            <tr>
+                <td>#ccccff</td>
+                <td class="c-ccccff"> - - - - - - - - - - - - - - - - - - - - </td>
+            </tr>
+            <tr>
+                <td>#000066</td>
+                <td class="c-000066"> - - - - - - - - - - - - - - - - - - - - </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <!-- Navegação de Ir e Vir (Rodapé) -->
+    <footer>
+        <p>
+            <a href="#topo">Voltar ao Topo</a> | 
+            <a href="Praticando1.html">Praticando 1</a> | 
+            <a href="Praticando2.html">Praticando 2</a> | 
+            <a href="Praticando3.html">Praticando 3</a> | 
+            <a href="Praticando5.html">Praticando 5</a> | 
+            <a href="index.html">Voltar ao Menu Aula VI</a> |
+            <a href="../MeuSitePessoal_LucasWatanabe/index.html">Voltar ao Site Pessoal</a>
+        </p>
+        <p>&copy; 2026 IFSP Votuporanga — Desenvolvimento Web I</p>
+    </footer>
+
+</body>
+
+</html>
