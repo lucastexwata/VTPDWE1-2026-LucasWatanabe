@@ -1,67 +1,109 @@
-/* ===================================================
-   1. REGRAS GERAIS E TIPOGRAFIA (Seletor de Elemento)
-   =================================================== */
+    /* ===================================================
+    1. REGRAS GERAIS E TIPOGRAFIA (Seletor de Elemento)
+    =================================================== */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9; /* Cor de fundo suave */
-    color: #333333;           /* Cor do texto principal */
+    background-color: #f0f2f5; /* Fundo suave estilo app moderno */
+    color: #2c3e50;           /* Texto escuro com boa leitura */
     line-height: 1.6;
 }
 
-/* ===================================================
-   2. MENU DE NAVEGAÇÃO (Seletor de Classe)
-   =================================================== */
+    /* ===================================================
+    2. MENU DE NAVEGAÇÃO EM FORMATO DE BOTÕES (Seletor de Classe)
+    =================================================== */
 .menu-navegacao {
-    background-color: #1a2a3a; /* Cor base escura */
-    padding: 15px;
+    background-color: #1a2a3a; /* Cabeçalho escuro estilo tech */
+    padding: 20px 15px;
     text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+.menu-navegacao ul {
+    list-style: none;             /* Remove bolinhas da lista */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1200px;            /* Evita esticar demais em telas ultra-wide */
+    
+    display: flex;                /* Organiza os botões LADO A LADO */
+    flex-wrap: wrap;              /* QUEBRA para baixo quando chega no fim da tela */
+    justify-content: center;      /* Centraliza os botões na tela */
+    gap: 10px;                    /* Espaçamento uniforme entre cada botão */
+}
+
+.menu-navegacao li {
+    display: flex;
+}
+
+/* Transforma os links <a> em BOTÕES estilo UI */
 .menu-navegacao a {
+    display: inline-block;
+    padding: 10px 18px;            /* Padding interno do botão */
+    margin: 2px;                   /* Margin externa */
+    background: linear-gradient(135deg, #243b55, #008cba); /* Gradiente moderno */
     color: #ffffff;
     text-decoration: none;
-    margin: 0 12px;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-weight: bold;
-    /* Transição suave para o efeito hover */
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 600;
+    font-size: 0.92rem;
+    border-radius: 8px;            /* Cantos arredondados */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Sombra 3D */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* Efeito :hover no Menu (Obrigatório) */
+/* Efeito :hover nos Botões (Obrigatório) */
 .menu-navegacao a:hover {
-    background-color: #008cba; /* Cor de destaque */
+    background: linear-gradient(135deg, #008cba, #00b4d8); /* Troca de tom no hover */
     color: #ffffff;
+    transform: translateY(-3px);  /* Elevação do botão no hover */
+    box-shadow: 0 6px 15px rgba(0, 140, 186, 0.4); /* Brilho neon sutil */
 }
 
-/* ===================================================
-   3. BOTÃO VOLTAR AO TOPO (Seletor de ID)
-   =================================================== */
+/* Efeito ao Clicar (Active) */
+.menu-navegacao a:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+    /* ===================================================
+    3. BOTÃO VOLTAR AO TOPO (Seletor de ID)
+    =================================================== */
 #voltar-topo {
     display: inline-block;
-    margin: 20px 0;
-    padding: 10px 20px;
-    background-color: #1a2a3a;
+    margin: 25px auto;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #1a2a3a, #2c3e50);
     color: #ffffff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 25px;           /* Formato de pílula arredondada */
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Efeito :hover no Botão (Obrigatório) */
+/* Efeito :hover no Botão Voltar ao Topo (Obrigatório) */
 #voltar-topo:hover {
-    background-color: #008cba;
+    background: linear-gradient(135deg, #008cba, #005f73);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 140, 186, 0.3);
 }
 
-/* ===================================================
-   4. RODAPÉ COMPARTILHADO
-   =================================================== */
+    /* ===================================================
+    4. RODAPÉ COMPARTILHADO
+    =================================================== */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #e2e2e2;
-    margin-top: 40px;
+    padding: 25px 15px;
+    background-color: #1a2a3a;     /* Combina com o topo do site */
+    color: #a0aec0;               /* Texto suave no escuro */
+    margin-top: 50px;
+    font-size: 0.9rem;
+    border-top: 3px solid #008cba; /* Linha de destaque azul */
+}
+
+footer p {
+    margin: 5px 0;
 }

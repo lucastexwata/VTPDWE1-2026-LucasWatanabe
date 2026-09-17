@@ -1,67 +1,106 @@
-/* ===================================================
-   FOLHA DE ESTILO ESPECÍFICA: INDEX (SOBRE MIM)
-   =================================================== */
+    /* ===================================================
+    FOLHA DE ESTILO ESPECÍFICA: INDEX (SOBRE MIM)
+    =================================================== */
 
-/* Container Principal da Página */
-.container-principal {
-    max-width: 900px;
+/* Fundo Amarelo Pastel Mais Escuro / Encorpado */
+body {
+    background-color: #f5e8b7; /* Amarelo pastel quente e encorpado */
+}
+
+/* Container Principal com bordas suaves e destaque */
+main {
+    max-width: 950px;
     margin: 30px auto;
-    padding: 25px;
+    padding: 30px;
     background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
-/* Título Principal da Página */
-.titulo-sobre {
-    color: #1a2a3a;
-    border-bottom: 3px solid #008cba; /* Cor de destaque da paleta */
-    padding-bottom: 10px;
+/* Estilização do Cabeçalho Superior */
+header {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: #ffffff;
     margin-bottom: 20px;
+    border-bottom: 4px solid #d8be63; /* Borda divisória no topo */
 }
 
-/* Seção do Perfil / Apresentação */
-.secao-perfil {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-/* Imagem de Perfil */
-.foto-perfil {
-    max-width: 200px;
-    border-radius: 50%; /* Deixa a imagem circular */
-    border: 4px solid #008cba;
-    padding: 4px;
-}
-
-/* Bloco de Texto / Bio */
-.texto-bio {
-    flex: 1;
-    font-size: 1.1rem;
-    color: #444444;
-}
-
-/* Seção de Interesses / Hobbies com Box Model (Margin e Padding) */
-.secao-interesses {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-left: 5px solid #008cba;
-    margin-top: 25px;
-    border-radius: 0 8px 8px 0;
-}
-
-.secao-interesses h3 {
-    margin-top: 0;
+header h1 {
     color: #1a2a3a;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
 }
 
-.lista-interesses {
-    padding-left: 20px;
+header p {
+    font-size: 1.1rem;
+    color: #555555;
+    max-width: 750px;
+    margin: 0 auto;
 }
 
-.lista-interesses li {
-    margin-bottom: 8px;
+    /* ===================================================
+    DIVISÃO DE SEÇÕES COM BORDAS DEDICADAS
+    =================================================== */
+
+main section {
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #fffdf5;              /* Leve toque pastel de fundo nos blocos */
+    border: 2px solid #e2d193;              /* Borda separando cada seção */
+    border-left: 6px solid #2a9d8f;         /* Borda de destaque em tom VERDE na esquerda */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o mouse na seção */
+main section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+main section h2 {
+    color: #1a2a3a;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px dashed #e2d193;      /* Linha pontilhada separando o título do texto */
+}
+
+/* Imagem de Perfil Estilizada */
+main section img {
+    display: block;
+    max-width: 260px;
+    height: auto;
+    border-radius: 12px;
+    border: 4px solid #2a9d8f;              /* Moldura Verde */
+    margin: 15px 0 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+    /* ===================================================
+    BOTÕES VERDES COM HOVER PARA REDES SOCIAIS E LINKS
+    =================================================== */
+
+/* Transforma os links da seção de contato em BOTÕES VERDES */
+main section a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 6px 0;
+    background-color: #2a9d8f;              /* Tom de Verde moderno */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;              /* Animação para o hover */
+}
+
+/* Efeito HOVER Obrigatório nos Botões Verdes */
+main section a:hover {
+    background-color: #1b635a;              /* Verde escuro no hover */
+    color: #ffffff;
+    transform: translateY(-3px);           /* Elevação do botão */
+    box-shadow: 0 6px 12px rgba(42, 157, 143, 0.35); /* Sombra/Brilho verde */
 }
