@@ -1,0 +1,52 @@
+/* ===================================================
+   FOLHA DE ESTILO ESPECÍFICA: INSPIRAÇÃO
+   =================================================== */
+
+/* Container da Página de Inspiração */
+.container-inspiracao {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Título Principal */
+.titulo-inspiracao {
+    color: #1a2a3a;
+    border-bottom: 3px solid #008cba;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Bloco de Citação / Frase Marcante */
+.frase-inspiradora {
+    background-color: #eef7fa;
+    border-left: 5px solid #008cba;
+    margin: 25px 0;
+    padding: 15px 20px;
+    font-style: italic;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    border-radius: 0 6px 6px 0;
+}
+
+/* Biografia e Detalhes */
+.secao-biografia {
+    margin-bottom: 25px;
+    line-height: 1.7;
+    color: #444444;
+}
+
+/* Lista de Realizações / Motivos de Inspiração */
+.lista-realizacoes {
+    background-color: #f9f9f9;
+    padding: 20px 20px 20px 40px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+}
+
+.lista-realizacoes li {
+    margin-bottom: 10px;
+}

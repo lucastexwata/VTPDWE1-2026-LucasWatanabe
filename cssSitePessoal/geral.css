@@ -1,0 +1,67 @@
+/* ===================================================
+   1. REGRAS GERAIS E TIPOGRAFIA (Seletor de Elemento)
+   =================================================== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /* Cor de fundo suave */
+    color: #333333;           /* Cor do texto principal */
+    line-height: 1.6;
+}
+
+/* ===================================================
+   2. MENU DE NAVEGAÇÃO (Seletor de Classe)
+   =================================================== */
+.menu-navegacao {
+    background-color: #1a2a3a; /* Cor base escura */
+    padding: 15px;
+    text-align: center;
+}
+
+.menu-navegacao a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 12px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    /* Transição suave para o efeito hover */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efeito :hover no Menu (Obrigatório) */
+.menu-navegacao a:hover {
+    background-color: #008cba; /* Cor de destaque */
+    color: #ffffff;
+}
+
+/* ===================================================
+   3. BOTÃO VOLTAR AO TOPO (Seletor de ID)
+   =================================================== */
+#voltar-topo {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #1a2a3a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito :hover no Botão (Obrigatório) */
+#voltar-topo:hover {
+    background-color: #008cba;
+}
+
+/* ===================================================
+   4. RODAPÉ COMPARTILHADO
+   =================================================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #e2e2e2;
+    margin-top: 40px;
+}

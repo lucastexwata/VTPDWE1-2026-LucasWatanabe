@@ -1,0 +1,67 @@
+/* ===================================================
+   FOLHA DE ESTILO ESPECÍFICA: INDEX (SOBRE MIM)
+   =================================================== */
+
+/* Container Principal da Página */
+.container-principal {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Título Principal da Página */
+.titulo-sobre {
+    color: #1a2a3a;
+    border-bottom: 3px solid #008cba; /* Cor de destaque da paleta */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Seção do Perfil / Apresentação */
+.secao-perfil {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Imagem de Perfil */
+.foto-perfil {
+    max-width: 200px;
+    border-radius: 50%; /* Deixa a imagem circular */
+    border: 4px solid #008cba;
+    padding: 4px;
+}
+
+/* Bloco de Texto / Bio */
+.texto-bio {
+    flex: 1;
+    font-size: 1.1rem;
+    color: #444444;
+}
+
+/* Seção de Interesses / Hobbies com Box Model (Margin e Padding) */
+.secao-interesses {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-left: 5px solid #008cba;
+    margin-top: 25px;
+    border-radius: 0 8px 8px 0;
+}
+
+.secao-interesses h3 {
+    margin-top: 0;
+    color: #1a2a3a;
+}
+
+.lista-interesses {
+    padding-left: 20px;
+}
+
+.lista-interesses li {
+    margin-bottom: 8px;
+}
