@@ -1,5 +1,5 @@
-/* ===================================================
-   FOLHA DE ESTILO ESPECÍFICA: VALIDAÇÃO
+    /* ===================================================
+    FOLHA DE ESTILO ESPECÍFICA: VALIDAÇÃO
    =================================================== */
 
 /* Fundo Amarelo Pastel Mais Escuro / Encorpado */
@@ -80,9 +80,9 @@ main section h2 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ===================================================
-   BOTÕES VERDES COM HOVER PARA LINKS DO W3C
-   =================================================== */
+    /* ===================================================
+    BOTÕES VERDES COM HOVER PARA LINKS DO W3C
+    =================================================== */
 
 main section a {
     display: inline-block;
