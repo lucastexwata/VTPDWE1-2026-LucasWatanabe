@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- 1. IMPORTAÇÃO DA FONTE LOBSTER DO GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <title>Praticando 2 - Lhama, lhama, lhama!</title>
+
+    <style>
+        body{
+            font-family: Lobster, cursive;
+            padding: 0;
+            margin: 0;
+            position: relative;
+            overflow-x: hidden;
+        }
+        .blocoLhama{
+            width: 100vw;
+            min-height: 480px;
+            padding: 50px 40px;
+            margin-bottom: 50px;
+            box-sizing: border-box;
+        }
+        .blocoLhama h2{
+            margin: 0 0 20px 0;
+            font-size: 64px;
+            font-weight: normal;
+        }
+        .secaoG{
+            background-color: #90EE90;
+            border-top: 10px solid #000080;
+            border-bottom: 10px solid #000080;
+        }
+        .secaoR{
+            background-color: #f08080;
+            border-top: 10px solid #a52a2a;
+            border-bottom: 10px solid #a52a2a;
+            text-align: right;
+        }
+        .galeriaLhamas{
+            display: flex;
+            align-items: flex-end;
+            gap: 5px;
+        }
+        .secaoG .galeriaLhamas{
+            justify-content: flex-start;
+        }
+        .secaoR .galeriaLhamas{
+            justify-content: flex-end;
+        }
+        .img-1{ width: 140px; height: auto;}
+        .img-2{ width: 200px; height: auto;}
+        .img-3{ width: 280px; height: auto;}
+        .img-4{ width: 380px; height: auto;}
+        .lhamaImg{
+            width: 300px;
+            height: auto;
+            display: block;
+            margin-top: 10px;
+        }
+        .lhamaImgDireita{
+            position: absolute;
+            right: 40px;
+            top: 180px;
+            margin: 0;
+        }
+        .Gcontainer {
+            background-color: white;
+            border: 1vw solid black;
+            font-size: 2vw;
+            padding: 15px;
+            margin-bottom: 20px;
+            width: 65%;
+            box-sizing: border-box;
+        }
+        .Rcontainer {
+            background-color: white;
+            border: 6px solid black;
+            font-size: 14pt;
+            padding: 15px;
+            margin-bottom: 20px;
+            width: 620px;
+            box-sizing: border-box;
+        }
+        h1{
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        h2{
+            margin-top: 10px;
+            font-size: 44px;
+            margin-bottom: 10px;
+        }
+        .h2fixoDireita{
+            position: fixed;
+            right: 20px;
+        }
+        ul{
+            padding-left: 20px;
+        }
+        mark{
+            color: yellow;
+            color:inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Praticando 2 - Lhama, lhama, lhama!</h1>
+    <nav class="nav-global">
+        <a href="../index.html">🏠 Site Pessoal</a> |
+        <a href="index.html">&lt;&lt; Voltar para Aula VI</a> |
+        <a href="Praticando3.html">Praticando 3 &gt;&gt;</a>
+    </nav>
+    <!================================================================================================================================================> 
+    <!SEÇÃO VERDE>
+    <!================================================================================================================================================>
+    <div class="blocoLhama secaoG">
+            <h2>Lhama, lhama, lhama!</h2>
+            <div class="galeriaLhamas">
+                <img class="img-1" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/DED5/production/_104154075_gettyimages-154948449.jpg"
+                alt="Lhama 1">
+                <img class="img-2" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/DED5/production/_104154075_gettyimages-154948449.jpg"
+                alt="Lhama 2">
+                <img class="img-3" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/DED5/production/_104154075_gettyimages-154948449.jpg"
+                alt="Lhama 3">
+                <img class="img-4" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/DED5/production/_104154075_gettyimages-154948449.jpg"
+                alt="Lhama 4">
+            </div>
+            
+        </div>
+
+    <!================================================================================================================================================>   
+    <!SEÇÃO VERMELHA>
+    <!================================================================================================================================================>
+    <div class="blocoLhama secaoR">
+            <h2><span class="h2fixoDireita">Lhama, lhama, lhama!</span></h2>
+            <div class="galeriaLhamas">
+                <img class="img-4" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/DED5/production/_104154075_gettyimages-154948449.jpg"
+                alt="Lhama 4">
+                <img class="img-3" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/DED5/production/_104154075_gettyimages-154948449.jpg"
+                alt="Lhama 3">
+                <img class="img-2" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/DED5/production/_104154075_gettyimages-154948449.jpg"
+                alt="Lhama 2">
+                <img class="img-1" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/DED5/production/_104154075_gettyimages-154948449.jpg"
+                alt="Lhama 1">
+            </div>
+        </div>
+            
+    <footer>
+        <p>© 2026 IFSP Votuporanga — Desenvolvimento Web I</p>
+        <p>
+            <a href="#topo">Voltar ao Topo</a> | 
+            <a href="Praticando1.html">Praticando 1</a> | 
+            <a href="Praticando2.html">Praticando 2</a> | 
+            <a href="Praticando4.html">Praticando 4</a> | 
+            <a href="Praticando5.html">Praticando 5</a> | 
+            <a href="index.html">Voltar ao Menu Aula VI</a>  |
+            <a href="../index.html">Voltar ao Site Pessoal</a>
+        </p>
+    </footer>
+</body>
+
+</html>

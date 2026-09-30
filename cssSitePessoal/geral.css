@@ -1,82 +1,118 @@
-    /* ===================================================
-    1. REGRAS GERAIS E TIPOGRAFIA (Seletor de Elemento)
-    =================================================== */
-body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+/* ===================================================
+    1. RESET E REGRAS GERAIS (Mobile First Base)
+   =================================================== */
+* {
+    box-sizing: border-box; /* Garante cálculo correto de larguras */
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5; /* Fundo suave estilo app moderno */
-    color: #2c3e50;           /* Texto escuro com boa leitura */
-    line-height: 1.6;
 }
 
-    /* ===================================================
-    2. MENU DE NAVEGAÇÃO EM FORMATO DE BOTÕES (Seletor de Classe)
-    =================================================== */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Corta qualquer elemento que tente vazamento horizontal */
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #2c3e50;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Imagens responsivas em todas as páginas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estrutura de Contentor Fluida */
+.container {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Evita quebras estranhas de títulos em ecrãs de 320px */
+h1, h2, h3, p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+/* ===================================================
+    2. MENU DE NAVEGAÇÃO RESPONSIVO
+   =================================================== */
 .menu-navegacao {
-    background-color: #1a2a3a; /* Cabeçalho escuro estilo tech */
-    padding: 20px 15px;
+    background-color: #1a2a3a;
+    padding: 15px 10px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .menu-navegacao ul {
-    list-style: none;             /* Remove bolinhas da lista */
+    list-style: none;
     padding: 0;
     margin: 0 auto;
-    max-width: 1200px;            /* Evita esticar demais em telas ultra-wide */
-    
-    display: flex;                /* Organiza os botões LADO A LADO */
-    flex-wrap: wrap;              /* QUEBRA para baixo quando chega no fim da tela */
-    justify-content: center;      /* Centraliza os botões na tela */
-    gap: 10px;                    /* Espaçamento uniforme entre cada botão */
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column; /* MOBILE FIRST: Empilhado em coluna no smartphone */
+    gap: 25px 10px; /*  */
 }
 
 .menu-navegacao li {
+    width: 100%; /* Ocupa a largura inteira no mobile para facilitar o toque */
     display: flex;
+    margin-bottom: 12px;
 }
 
-/* Transforma os links <a> em BOTÕES estilo UI */
+/* Links em Formato de Botão com área de toque recomendada (min-height: 44px) */
 .menu-navegacao a {
-    display: inline-block;
-    padding: 10px 18px;            /* Padding interno do botão */
-    margin: 2px;                   /* Margin externa */
-    background: linear-gradient(135deg, #243b55, #008cba); /* Gradiente moderno */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px 4px !important;
+    min-height: 44px; /* Acessibilidade Touch */
+    width: 100%;
+    padding: 10px 18px;
+    background: linear-gradient(135deg, #243b55, #008cba);
     color: #ffffff;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.92rem;
-    border-radius: 8px;            /* Cantos arredondados */
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Sombra 3D */
+    font-size: 0.95rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* Efeito :hover nos Botões (Obrigatório) */
 .menu-navegacao a:hover {
-    background: linear-gradient(135deg, #008cba, #00b4d8); /* Troca de tom no hover */
-    color: #ffffff;
-    transform: translateY(-3px);  /* Elevação do botão no hover */
-    box-shadow: 0 6px 15px rgba(0, 140, 186, 0.4); /* Brilho neon sutil */
+    background: linear-gradient(135deg, #008cba, #00b4d8);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 140, 186, 0.4);
 }
 
-/* Efeito ao Clicar (Active) */
 .menu-navegacao a:active {
-    transform: translateY(-1px);
+    transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-    /* ===================================================
-    3. BOTÃO VOLTAR AO TOPO (Seletor de ID)
-    =================================================== */
+/* ===================================================
+    3. BOTÃO VOLTAR AO TOPO & COMPONENTES
+   =================================================== */
 #voltar-topo {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    max-width: 220px;
     margin: 25px auto;
-    padding: 12px 24px;
+    padding: 10px 24px;
     background: linear-gradient(135deg, #1a2a3a, #2c3e50);
     color: #ffffff;
     text-decoration: none;
-    border-radius: 25px;           /* Formato de pílula arredondada */
+    border-radius: 25px;
     font-weight: bold;
     font-size: 0.9rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -84,26 +120,59 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Efeito :hover no Botão Voltar ao Topo (Obrigatório) */
 #voltar-topo:hover {
     background: linear-gradient(135deg, #008cba, #005f73);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 140, 186, 0.3);
 }
 
-    /* ===================================================
+/* ===================================================
     4. RODAPÉ COMPARTILHADO
-    =================================================== */
+   =================================================== */
 footer {
     text-align: center;
     padding: 25px 15px;
-    background-color: #1a2a3a;     /* Combina com o topo do site */
-    color: #a0aec0;               /* Texto suave no escuro */
+    background-color: #1a2a3a;
+    color: #a0aec0;
     margin-top: 50px;
     font-size: 0.9rem;
-    border-top: 3px solid #008cba; /* Linha de destaque azul */
+    border-top: 3px solid #008cba;
 }
 
 footer p {
     margin: 5px 0;
+}
+
+/* ===================================================
+    5. MEDIA QUERIES (TABLETS E DESKTOPS)
+   =================================================== */
+
+/* Dispositivos Pequenos (até 360px - ecrãs ultra-compactos) */
+@media screen and (max-width: 360px) {
+    body {
+        font-size: 0.9rem;
+    }
+    
+    .container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+/* Tablets em diante (≥ 768px) */
+@media screen and (min-width: 768px) {
+    .menu-navegacao ul {
+        flex-direction: row; /* Menu passa a alinhar-se LADO A LADO */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu-navegacao li {
+        width: auto; /* Deixa de ocupar 100% no tablet/desktop */
+    }
+
+    .menu-navegacao a {
+        display: inline-block;
+        width: auto;
+    }
 }

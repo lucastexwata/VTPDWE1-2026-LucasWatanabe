@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 4 - Caixas verdes</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #ffffff;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        /* Classe reutilizável para limpar flutuações entre as linhas */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .linha {
+            margin-bottom: 20px;
+        }
+
+        /* Estilo base para todas as caixas */
+        .box {
+            background-color: green;
+        }
+
+        /* --- LINHA 1: Caixas quadradas no topo direito --- */
+        .box-square {
+            width: 80px;
+            height: 80px;
+            float: right;
+            margin-left: 15px; /* Espaçamento entre elas */
+        }
+
+        /* --- LINHA 2: Retângulos horizontais à esquerda --- */
+        .box-horizontal {
+            width: 300px;
+            height: 80px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        /* --- LINHA 3: Retângulos verticais --- */
+        .box-vertical-left {
+            width: 90px;
+            height: 250px;
+            float: left;
+        }
+
+        .box-vertical-right {
+            width: 90px;
+            height: 250px;
+            float: right;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-global">
+        <a href="../index.html">🏠 Site Pessoal</a> |
+        <a href="index.html">&lt;&lt; Voltar para Aula VI</a>
+    </nav>
+
+    <h1>Praticando 4 - Caixas verdes</h1>
+
+    <!-- LINHA 1: 3 Caixas quadradas à direita -->
+    <div class="linha clearfix">
+        <div class="box box-square"></div>
+        <div class="box box-square"></div>
+        <div class="box box-square"></div>
+    </div>
+
+    <!-- LINHA 2: 2 Caixas horizontais à esquerda -->
+    <div class="linha clearfix">
+        <div class="box box-horizontal"></div>
+        <div class="box box-horizontal"></div>
+    </div>
+
+    <!-- LINHA 3: 1 Caixa vertical à esquerda e 2 à direita -->
+    <div class="linha clearfix">
+        <div class="box box-vertical-left"></div>
+        <div class="box box-vertical-right"></div>
+        <div class="box box-vertical-right"></div>
+    </div>
+    <footer>
+        <p>© 2026 IFSP Votuporanga — Desenvolvimento Web I</p>
+        <p>
+            <a href="#topo">Voltar ao Topo</a> | 
+            <a href="Praticando1.html">Praticando 1</a> | 
+            <a href="Praticando2.html">Praticando 2</a> | 
+            <a href="Praticando4.html">Praticando 4</a> | 
+            <a href="Praticando5.html">Praticando 5</a> | 
+            <a href="index.html">Voltar ao Menu Aula VI</a>  |
+            <a href="../index.html">Voltar ao Site Pessoal</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

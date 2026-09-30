@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- 1. IMPORTAÇÃO DA FONTE LOBSTER DO GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
+
+    <title>Praticando 3 - Float</title>
+
+    <style>
+        body{
+            background-color: #8a00ff;
+            font-family: 'Emilys Candy', cursive;
+            padding: 0;
+            margin: 0;
+        }
+        .contOlvGreen{
+            background-color: #b2c282;
+            width: 96%;
+            max-width: 1500;
+            margin: 0 auto;
+            padding: 30px;
+            box-sizing: border-box;
+            color: #1a1a1a;
+            font-size: 15px;
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flow-root;
+        }
+        .contOlvGreen h1:first-child {
+            margin-top: 0;
+        }
+        /* TÍTULO COM A FONTE EMILYS CANDY */
+        h1{
+            font-family: 'Emilys Candy', cursive;
+            font-size: 36px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        .imgRightSup{
+            float: right;
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .imgRightInf{
+            float: right;
+            width: 240px;
+            height: 220px;
+            object-fit: cover;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .imgLeft{
+            float: left;
+            width: 220px;
+            height: auto;
+            margin-right: 20px;
+            margin-bottom: 15px;
+        }
+        .clearfix::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-global">
+        <a href="../index.html">🏠 Site Pessoal</a> |
+        <a href="index.html">&lt;&lt; Voltar para Aula VI</a> |
+        <a href="Praticando4.html">Praticando 4 &gt;&gt;</a>
+    </nav>
+    <div class="contOlvGreen clearfix">
+        <h1>Praticando 3 - Float<</h1>
+        <!-- IMAGEM DA DIREITA -->
+        <img class="imgRightSup" src="https://thumbs.dreamstime.com/b/panda-vermelha-31506346.jpg"
+        alt="Panda Vermelho 1">
+            <h2>Lhama, lhama, lhama!</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum labore voluptas hic voluptatibus ea, aliquid ratione sunt expedita dolore aut enim temporibus est magni inventore, eveniet tempora tenetur, possimus reprehenderit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aperiam non culpa, suscipit consequuntur distinctio vel atque ipsa soluta omnis blanditiis reiciendis expedita magnam? Amet ipsum aperiam minima dolores laboriosam.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos consequatur error incidunt eveniet hic molestias eaque facilis voluptate voluptatem architecto quo asperiores nobis, magnam provident id animi reiciendis necessitatibus? Ipsa. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatibus amet, non voluptatem, quas minus recusandae quisquam dignissim os veniam neque velit suscipit ad delectus asperiores, pariatur similique temporibus nemo? Alias?</p>
+        <!-- IMAGEM DA ESQUERDA -->
+        
+        <img class="imgLeft" src="https://www.zoosantoinacio.com/wp-content/uploads/2020/02/file_00000000aa2472439934271611a631d2.png" 
+        alt="Panda Vermelho - Inferior Esquerda">
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum labore voluptas hic voluptatibus ea, aliquid ratione sunt expedita voluptate us, ea, aliquid ratione sunt expedita dolore odit enim temporibus est magni inventore, eveniet tempora tenetur, possimus reprehenderit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aperiam non culpa, suscipit consequuntur distinctio vel atque ipsa soluta omnis blanditiis reiciendis expedita magnam? Amet ipsum aperiam minima dolores laboriosam.</p>
+
+        <img class="imgRightInf" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMe_jT4RVMnnoRy1ddGRKdL1BvBmYrwGY6-BRrEwyZSFivhFGnGNh1joWh&s=10" 
+        alt="Panda Vermelho - Inferior Esquerda">
+
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos consequatur error incidunt eveniet hic molestias eaque facilis voluptate voluptatem architecto quo asperiores nobis, magnam provident id animi reiciendis necessitatibus? Ipsa. Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum labore voluptas hic voluptatibus ea, aliquid ratione sunt expedita magn inventore, eveniet tempora tenetur, possimus reprehenderit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aperiam non culpa, suscipit distinctio vel atque ipsa soluta omnis blanditiis reiciendis expedita magnam? Amet ipsum aperiam minima dolores laboriosam.</p>
+
+        
+    </div>
+    <footer>
+        <p>© 2026 IFSP Votuporanga — Desenvolvimento Web I</p>
+        <p>
+            <a href="#topo">Voltar ao Topo</a> | 
+            <a href="Praticando1.html">Praticando 1</a> | 
+            <a href="Praticando2.html">Praticando 2</a> | 
+            <a href="Praticando4.html">Praticando 4</a> | 
+            <a href="Praticando5.html">Praticando 5</a> | 
+            <a href="index.html">Voltar ao Menu Aula VI</a>  |
+            <a href="../index.html">Voltar ao Site Pessoal</a>
+        </p>
+    </footer>
+</body>
+
+</html>
