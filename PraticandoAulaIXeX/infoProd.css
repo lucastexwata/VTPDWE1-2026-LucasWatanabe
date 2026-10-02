@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* ==========================================================================
+   PALETA DE CORES & VARIÁVEIS (TODAS DECLARADAS CORRETAMENTE)
+   ========================================================================== */
+:root {
+    --bg-fundo: #ffffff;             /* Fundo branco da página */
+    --bg-card: #f4f6f4;              /* Cartões com leve tom de musgo muito claro */
+    --verde-musgo: #2d4a3e;          /* Verde musgo principal */
+    --verde-musgo-escuro: #1c3028;   /* Verde musgo profundo */
+    --dourado: #d4af37;              /* Dourado metálico */
+    --dourado-hover: #b89628;        /* Dourado mais escuro no hover */
+    --preto: #111111;                /* Preto para textos principais */
+    --texto-cinza: #555555;          /* Texto secundário */
+    --cor-borda: #d0d7d3;            /* Borda suave */
+    --fonte-mono: 'Space Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fonte-mono);
+    background-color: var(--bg-fundo);
+    color: var(--preto);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   1. MARQUEE / TICKER DO TOPO
+   ========================================================================== */
+.marquee-ticker {
+    background-color: var(--preto);
+    color: var(--dourado);
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-bottom: 2px solid var(--dourado);
+}
+
+.container-loja {
+    padding: 20px 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   2. HERO BANNER PRINCIPAL (COM CONTRASTE PERFEITO)
+   ========================================================================== */
+.banner-drop {
+    background-color: var(--verde-musgo); /* Fundo escuro ajustado */
+    border: 1px solid var(--dourado);
+    padding: 35px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.tag-limited {
+    background-color: var(--preto);
+    color: var(--dourado);
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 15px;
+    border: 1px solid var(--dourado);
+}
+
+.banner-drop h1 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.banner-drop p {
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-comprar.main-cta {
+    background-color: var(--dourado);
+    color: var(--preto);
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.btn-comprar.main-cta:hover {
+    background-color: #ffffff;
+    color: var(--verde-musgo);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================================================
+   3. SEÇÕES & ESTRUTURA GERAL
+   ========================================================================== */
+.secao-infoproduto {
+    background-color: #ffffff;
+    border: 1px solid var(--cor-borda);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.secao-infoproduto h2 {
+    color: var(--verde-musgo);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--dourado);
+    padding-bottom: 8px;
+}
+
+.subtitulo-secao {
+    font-size: 0.85rem;
+    color: var(--texto-cinza);
+    margin-bottom: 20px;
+}
+
+.catalogo-produtos {
+    width: 100%;
+}
+
+.grid-produtos {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* ==========================================================================
+   4. CARDS DE PRODUTOS & HOVER
+   ========================================================================== */
+.card-produto {
+    background-color: #ffffff;
+    border: 1px solid var(--cor-borda);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-produto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(45, 74, 62, 0.15);
+}
+
+.box-imagem {
+    width: 100%;
+    height: 220px;
+    background-color: var(--bg-card);
+    border: 2px dashed var(--verde-musgo);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-produto:hover .box-imagem {
+    transform: translateY(-4px);
+    border-color: var(--dourado);
+}
+
+.box-imagem img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.card-produto:hover .box-imagem img {
+    transform: scale(1.06);
+}
+
+.artista {
+    color: var(--dourado);
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.card-produto h3 {
+    font-size: 0.95rem;
+    color: var(--verde-musgo);
+    margin: 5px 0 10px 0;
+    line-height: 1.3;
+}
+
+.preco {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--preto);
+    margin-bottom: 15px;
+}
+
+.tag-formato {
+    font-size: 0.75rem;
+    color: var(--texto-cinza);
+    font-weight: normal;
+    display: block;
+}
+
+/* BOTÕES DOS CARDS */
+.btn-comprar, .btn-comprar-secundario {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.btn-comprar {
+    background-color: var(--dourado);
+    color: var(--preto);
+    border: 1px solid var(--dourado);
+}
+
+.btn-comprar:hover {
+    background-color: var(--dourado-hover);
+    border-color: var(--dourado-hover);
+    transform: translateY(-2px);
+}
+
+.btn-comprar-secundario {
+    background-color: transparent;
+    border: 1px solid var(--verde-musgo);
+    color: var(--verde-musgo);
+    margin-top: 8px;
+}
+
+.btn-comprar-secundario:hover {
+    background-color: var(--verde-musgo);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   5. COMPONENTES MOBILE & SIDEBAR
+   ========================================================================== */
+.secao-exclusiva-mobile {
+    display: block;
+    margin: 0 15px 20px 15px;
+}
+
+.card-mobile-pix {
+    background-color: var(--bg-card);
+    border: 1px solid var(--dourado);
+    padding: 25px 20px;            
+    border-radius: 8px;
+    text-align: center;
+    display: flex;                
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;                      
+}
+
+.card-mobile-pix p {
+    margin-bottom: 10px;           
+    line-height: 1.5;
+}
+
+.card-mobile-pix .btn-comprar,
+.card-mobile-pix .btn-main-cta,
+.card-mobile-pix a {
+    position: static !important;  
+    margin-top: 10px;             
+}
+
+.conteudo-mobile-aprender {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-simples {
+    background-color: var(--bg-card);
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    border-left: 3px solid var(--dourado);
+}
+
+.depoimento-mobile {
+    display: block;
+    background-color: var(--bg-card);
+    padding: 15px;
+    border-radius: 6px;
+    font-style: italic;
+    font-size: 0.85rem;
+}
+
+.depoimento-mobile .autor {
+    margin-top: 8px;
+    color: var(--verde-musgo);
+    font-weight: bold;
+    font-style: normal;
+}
+
+.conteudo-desktop-aprender,
+.depoimentos-desktop,
+.badge-desktop {
+    display: none;
+}
+
+.sidebar-filtros {
+    background-color: var(--bg-card);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--cor-borda);
+}
+
+.sidebar-filtros h3 {
+    color: var(--verde-musgo);
+    margin-bottom: 12px;
+}
+
+.grupo-filtro {
+    margin-bottom: 12px;
+}
+
+.grupo-filtro h4 {
+    font-size: 0.85rem;
+    color: var(--verde-musgo);
+    margin-bottom: 5px;
+}
+
+.grupo-filtro label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--texto-cinza);
+    margin-bottom: 5px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-item h4 {
+    font-size: 0.9rem;
+    color: var(--verde-musgo);
+}
+
+.faq-item p {
+    font-size: 0.85rem;
+    color: var(--texto-cinza);
+}
+
+.link-voltar {
+    color: var(--dourado);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   6. RODAPÉ (COM BARRINHA DIVISÓRIA)
+   ========================================================================== */
+.footer-loja {
+    background-color: var(--preto);
+    color: #ffffff;
+    padding: 30px 20px 20px 20px;
+    margin-top: 40px;
+    font-family: var(--fonte-mono);
+    border-top: 2px solid var(--dourado);
+}
+
+.footer-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-coluna h4 {
+    color: var(--dourado);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.footer-coluna p {
+    font-size: 0.85rem;
+    color: #dddddd;
+    line-height: 1.4;
+    margin-bottom: 3px;
+}
+
+.footer-linha {
+    border: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    max-width: 1100px;
+    margin: 25px auto 15px auto;
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.75rem;
+    color: #bbbbbb;
+}
+
+/* ==========================================================================
+   7. MEDIA QUERIES (3 COLUNAS NO DESKTOP)
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .secao-exclusiva-mobile,
+    .conteudo-mobile-aprender,
+    .depoimento-mobile {
+        display: none;
+    }
+
+    .conteudo-desktop-aprender {
+        display: flex;
+        gap: 15px;
+    }
+
+    .card-beneficio {
+        flex: 1;
+        background-color: var(--bg-card);
+        border: 1px solid var(--cor-borda);
+        padding: 15px;
+        border-radius: 6px;
+    }
+
+    .icon-beneficio {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+
+    .depoimentos-desktop {
+        display: flex;
+        gap: 15px;
+    }
+
+    .card-depoimento {
+        flex: 1;
+        background-color: var(--bg-card);
+        border: 1px dashed var(--verde-musgo);
+        padding: 15px;
+        border-radius: 6px;
+        font-size: 0.85rem;
+    }
+
+    .card-depoimento span {
+        display: block;
+        margin-top: 10px;
+        color: var(--dourado);
+        font-weight: bold;
+    }
+
+    .badge-desktop {
+        display: block;
+        background-color: var(--preto);
+        color: var(--dourado);
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        margin-bottom: 20px;
+        text-align: center;
+        border: 1px solid var(--dourado);
+    }
+
+    .layout-flex-loja {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .catalogo-produtos {
+        flex: 3;
+    }
+
+    .sidebar-filtros {
+        flex: 1;
+        position: sticky;
+        top: 20px;
+    }
+
+    .grid-produtos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+}
+
+.btn-index-praticando {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #d8ac35; /* Amarelo do tema */
+    color: #111111;
+    font-family: monospace;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.btn-index-praticando:hover {
+    background-color: #f1c43f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
