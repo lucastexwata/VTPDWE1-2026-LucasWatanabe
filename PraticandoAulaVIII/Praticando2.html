@@ -89,6 +89,9 @@
             margin-bottom: 20px;
             width: 620px;
             box-sizing: border-box;
+
+            /* Garante posicionamento absoluto */
+            position: relative !important;
         }
         h1{
             font-size: 32px;
@@ -100,8 +103,10 @@
             margin-bottom: 10px;
         }
         .h2fixoDireita{
-            position: fixed;
+            position: absolute !important;
+            border-top-left-radius: 5px;
             right: 20px;
+            margin: 0;
         }
         ul{
             padding-left: 20px;
@@ -121,7 +126,7 @@
         <a href="Praticando3.html">Praticando 3 &gt;&gt;</a>
     </nav>
     <!================================================================================================================================================> 
-    <!SEÇÃO VERDE>
+    <!SEÇÃO GREEN>
     <!================================================================================================================================================>
     <div class="blocoLhama secaoG">
             <h2>Lhama, lhama, lhama!</h2>
@@ -139,7 +144,7 @@
         </div>
 
     <!================================================================================================================================================>   
-    <!SEÇÃO VERMELHA>
+    <!SEÇÃO RED>
     <!================================================================================================================================================>
     <div class="blocoLhama secaoR">
             <h2><span class="h2fixoDireita">Lhama, lhama, lhama!</span></h2>
